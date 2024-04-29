@@ -28,7 +28,7 @@
 </div>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3k4a2Q3Njk4aGFxNHJpa3psaTJncHc5OThmazkxdnprMzI5OHhqZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bGgsc5mWoryfgKBx1u/giphy.gif" alt="giphy" />
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejBxbHZsYWV4NGh3NnhwOGYybWk5MGgwaDlyZWZja2lsOWhqaWYwZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gVlgj80ZLp9yo/giphy.gif" alt="giphy" />
 </p>
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
