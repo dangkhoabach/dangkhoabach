@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const name = document.getElementById("name");
   const email = document.getElementById("email");
   const subject = document.getElementById("subject");
-  const message = document.getElementById("message");
+  const contactMessage = document.getElementById("contactMessage");
   const submit = document.getElementById("submit");
-  const language = localStorage.getItem('language') || 'en';
+  const language = localStorage.getItem("language") || "en";
 
   submit.addEventListener("click", (e) => {
     NProgress.start();
@@ -15,12 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
       name.value === "" ||
       email.value === "" ||
       subject.value === "" ||
-      message.value === ""
+      contactMessage.value === ""
     ) {
       Swal.fire({
-        icon: 'warning',
-        title: 'Oops...',
-        text: language === 'en'
+        icon: "warning",
+        title: "Oops...",
+        text:
+          language === "en"
             ? `Please fill in all the information.`
             : `Vui lòng điền đầy đủ thông tin`,
       });
@@ -32,63 +33,77 @@ document.addEventListener("DOMContentLoaded", () => {
       name: name.value,
       email: email.value,
       subject: subject.value,
-      message: message.value,
+      contactMessage: contactMessage.value,
     };
-    googleForm(data);
+    sendToDiscordWebhook(data);
   });
 
-  async function googleForm(data) {
-    const formUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLScmK4-e7nQXo8FDAoVytVIDyj9rR-VKFZGAKRHRpp7QOJ5C1A/formResponse";
-    const formData = new FormData();
-    formData.append("entry.655903665", data.name);
-    formData.append("entry.1397596021", data.email);
-    formData.append("entry.1010836437", data.subject);
-    formData.append("entry.2071379417", data.message);
+  async function sendToDiscordWebhook(data) {
+    const webhookUrl =
+      "https://discord.com/api/webhooks/1309123601131376712/YJHhOBSD4bTcNv-dKrLUd0lA9ubokTMb5eWr50LCYVs2gYdkgY0gTgvXzEkPvJ73a0QJ";
+
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    const payload = {
+      content: `**dangkhoabach Website Contact**
+${formattedDate}
+- **Name**: ${data.name}
+- **Email**: ${data.email}
+- **Subject**: ${data.subject}
+- **Message**: ${data.contactMessage}`,
+    };
 
     try {
-      const response = await fetch(formUrl, {
+      const response = await fetch(webhookUrl, {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
         Swal.fire({
-          icon: 'success',
-          title: language === 'en' ? 'Message Sent' : 'Tin nhắn đã gửi',
-          text: language === 'en'
-            ? `Thank you ${data.name}. Your message has been sent. I will contact you as soon as possible!`
-            : `Cảm ơn ${data.name}. Tin nhắn của bạn đã được gửi. Tôi sẽ liên hệ đến bạn sớm nhất có thể!`,
+          icon: "success",
+          title: language === "en" ? "Message Sent" : "Tin nhắn đã gửi",
+          text:
+            language === "en"
+              ? `Thank you ${data.name}. Your message has been sent to Discord!`
+              : `Cảm ơn ${data.name}. Tin nhắn của bạn đã được gửi đến Discord!`,
         });
 
-        resetForm()
+        resetForm();
       } else {
-        throw new Error("There was an error sending the message. Please try again later.");
+        throw new Error(
+          "Failed to send message to Discord. Please try again later."
+        );
       }
     } catch (error) {
-      console.error("Lỗi:", error.message);
-
-      const language = localStorage.getItem('language') || 'en';
+      console.error("Error:", error);
 
       Swal.fire({
-        icon: 'success',
-        title: language === 'en' ? 'Message Sent' : 'Tin nhắn đã gửi',
-        text: language === 'en'
-            ? `Thank you ${data.name}. Your message has been sent. I will contact you as soon as possible!`
-            : `Cảm ơn ${data.name}. Tin nhắn của bạn đã được gửi. Tôi sẽ liên hệ đến bạn sớm nhất có thể!`,
+        icon: "error",
+        title: language === "en" ? "Error" : "Lỗi",
+        text:
+          language === "en"
+            ? `There was an error sending your message. Please try again later.`
+            : `Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.`,
       });
-
-      resetForm()
     } finally {
       NProgress.done();
     }
   }
 
   function resetForm() {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("subject").value = "";
-    document.getElementById("message").value = "";
-    document.getElementById("success").innerHTML = "";
-}
+    name.value = "";
+    email.value = "";
+    subject.value = "";
+    contactMessage.value = "";
+  }
 });
