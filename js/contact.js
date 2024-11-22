@@ -74,14 +74,14 @@ ${formattedDate}
           title: language === "en" ? "Message Sent" : "Tin nhắn đã gửi",
           text:
             language === "en"
-              ? `Thank you ${data.name}. Your message has been sent to Discord!`
-              : `Cảm ơn ${data.name}. Tin nhắn của bạn đã được gửi đến Discord!`,
+              ? `Thank you ${data.name}. Your message has been sent to dangkhoabach!`
+              : `Cảm ơn ${data.name}. Tin nhắn của bạn đã được gửi đến dangkhoabach!`,
         });
 
         resetForm();
       } else {
         throw new Error(
-          "Failed to send message to Discord. Please try again later."
+          "Failed to send message to dangkhoabach. Please try again later."
         );
       }
     } catch (error) {
