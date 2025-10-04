@@ -33,8 +33,8 @@
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=cs,html,css,tailwind,javascript" /><br>
-  <img src="https://skillicons.dev/icons?i=vscode,visualstudio,selenium,ps,github,bootstrap,mysql,php" />
+    <img src="https://skillicons.dev/icons?i=cs,dotnet,swift,html,css,javascript" /><br>
+  <img src="https://skillicons.dev/icons?i=visualstudio,vscode,github,bitbucket,cloudflare,postman" />
 </div>
   <br/><br/><br/>
 <hr/>
@@ -64,3 +64,4 @@
 <h3 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=25&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Thanks+for+visiting!+✌️;+Contact+me+via+my+Website!">
 </h3>
+
