@@ -6,7 +6,7 @@
 
 I have 3 years of experience and I build the whole thing: the database and API, the website or admin panel a team uses every day, native apps for iPhone and Mac, and the servers it all runs on. The systems are built to last — secure sign-in, encrypted data, audit trails and automated tests, more than 1,400 of them across my projects.
 
-> **Why most of my work isn't public here:** client projects live in private repositories, so the public repos on this profile are mostly university assignments from 2023–2024. Most projects below link to a case study with screenshots and technical details.
+> **Why some of my work isn't public here:** client projects live in private repositories, so they link to a case study with screenshots and technical details instead. My own macOS apps below are open source.
 
 ---
 
@@ -41,20 +41,20 @@ Bilingual company websites with admin panels for the teams to manage their own c
 
 **[Home lab on TrueNAS](https://dangkhoabach.vn/projects/P12)** — Home Assistant, a Minecraft server and DNS filtering, monitored and controlled from my admin console without opening a single inbound port: an unprivileged agent signs every request with HMAC, and a root helper only runs a fixed allowlist. Includes a custom Home Assistant integration that brings a smart-home cloud API into Apple Home.
 
-**macOS apps** — native Swift, signed auto-updates through Sparkle, used every day. [Download →](https://apps.dangkhoabach.vn)
+**macOS apps** — native Swift, open source under the MIT license, with signed auto-updates through Sparkle, used every day. [Download →](https://apps.dangkhoabach.vn)
 
 | App | What it does | Tests |
 | :--- | :--- | ---: |
-| [DKB Monitor](https://apps.dangkhoabach.vn/dkb-monitor) | Uptime, SSL and domain expiry, Mac hardware sensors and Linux servers over SSH, from the menu bar. Rewritten from Tauri to Swift. | 385 |
-| [DKB Source Control](https://apps.dangkhoabach.vn/dkb-source-control) | A Git client built to replace Sourcetree: line-by-line staging, a commit composer and a secret check before every commit. | 211 |
-| [DKB Secret](https://apps.dangkhoabach.vn/dkb-secret) | An offline vault for API keys, passwords and .env sets. Master key in the Secure Enclave, values sealed with HPKE, no network access. | 134 |
-| [DKB Downloader](https://apps.dangkhoabach.vn/dkb-downloader) | Video and audio from YouTube and hundreds of other sites, with a queue, playlists and channel watching. | 92 |
-| [DKB Clamshell](https://apps.dangkhoabach.vn/dkb-clamshell) | The screen blurs, tilts and fades as you close the MacBook lid, driven by the hinge-angle sensor. | 48 |
+| [SignalBar](https://github.com/dangkhoabach/SignalBar) | Uptime, SSL and domain expiry, Mac hardware sensors and Linux servers over SSH, from the menu bar. Rewritten from Tauri to Swift. | 385 |
+| [SourceDeck](https://github.com/dangkhoabach/SourceDeck) | A Git client built to replace Sourcetree: line-by-line staging, a commit composer and a secret check before every commit. | 219 |
+| [KeyCellar](https://github.com/dangkhoabach/KeyCellar) | An offline vault for API keys, passwords and .env sets. Master key in the Secure Enclave, values sealed with HPKE, no network access. | 134 |
+| [MediaCatch](https://github.com/dangkhoabach/MediaCatch) | A yt-dlp front end: a format picker, a download queue, playlists and channel watching. | 92 |
+| [FoldAway](https://github.com/dangkhoabach/FoldAway) | The screen blurs, tilts and fades as you close the MacBook lid, driven by the hinge-angle sensor. | 48 |
 
 <table>
   <tr>
-    <td width="50%"><a href="https://apps.dangkhoabach.vn/dkb-monitor"><img src="https://apps.dangkhoabach.vn/showcase/dkb-monitor/system-dark.webp" alt="DKB Monitor"></a></td>
-    <td width="50%"><a href="https://apps.dangkhoabach.vn/dkb-source-control"><img src="https://apps.dangkhoabach.vn/showcase/dkb-source-control/workingcopy-dark.webp" alt="DKB Source Control"></a></td>
+    <td width="50%"><a href="https://github.com/dangkhoabach/SignalBar"><img src="https://apps.dangkhoabach.vn/showcase/dkb-monitor/domains-dark.webp" alt="SignalBar"></a></td>
+    <td width="50%"><a href="https://github.com/dangkhoabach/SourceDeck"><img src="https://apps.dangkhoabach.vn/showcase/dkb-source-control/workingcopy-dark.webp" alt="SourceDeck"></a></td>
   </tr>
 </table>
 
