@@ -45,11 +45,12 @@ Bilingual company websites with admin panels for the teams to manage their own c
 
 | App | What it does | Tests |
 | :--- | :--- | ---: |
-| [SignalBar](https://github.com/dangkhoabach/SignalBar) | Uptime, SSL and domain expiry, Mac hardware sensors and Linux servers over SSH, from the menu bar. Rewritten from Tauri to Swift. | 385 |
-| [SourceDeck](https://github.com/dangkhoabach/SourceDeck) | A Git client built to replace Sourcetree: line-by-line staging, a commit composer and a secret check before every commit. | 219 |
+| [SignalBar](https://github.com/dangkhoabach/SignalBar) | Uptime, SSL and domain expiry, Mac hardware sensors and Linux servers over SSH, from the menu bar. Rewritten from Tauri to Swift. | 386 |
+| [SourceDeck](https://github.com/dangkhoabach/SourceDeck) | A Git client built to replace Sourcetree: line-by-line staging, a commit composer and a secret check before every commit. | 220 |
+| [EasyDock](https://github.com/dangkhoabach/EasyDock) | Habits from Windows on the Mac: click the Dock to minimize and ⌘Tab between windows, plus an encrypted clipboard history, system stats and cleanup. | 142 |
 | [KeyCellar](https://github.com/dangkhoabach/KeyCellar) | An offline vault for API keys, passwords and .env sets. Master key in the Secure Enclave, values sealed with HPKE, no network access. | 134 |
 | [MediaCatch](https://github.com/dangkhoabach/MediaCatch) | A yt-dlp front end: a format picker, a download queue, playlists and channel watching. | 92 |
-| [FoldAway](https://github.com/dangkhoabach/FoldAway) | The screen blurs, tilts and fades as you close the MacBook lid, driven by the hinge-angle sensor. | 48 |
+| [FoldAway](https://github.com/dangkhoabach/FoldAway) | The screen blurs, tilts and fades as you close the MacBook lid, driven by the hinge-angle sensor. | 50 |
 
 <table>
   <tr>
