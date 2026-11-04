@@ -45,7 +45,7 @@ Bilingual company websites with admin panels for the teams to manage their own c
 
 | App | What it does | Tests |
 | :--- | :--- | ---: |
-| [SignalBar](https://github.com/dangkhoabach/SignalBar) | Uptime, SSL and domain expiry, Mac hardware sensors and Linux servers over SSH, from the menu bar. Rewritten from Tauri to Swift. | 386 |
+| [SignalBar](https://github.com/dangkhoabach/SignalBar) | Uptime, SSL and domain expiry and Linux servers over SSH, from the menu bar. Rewritten from Tauri to Swift. | 262 |
 | [SourceDeck](https://github.com/dangkhoabach/SourceDeck) | A Git client built to replace Sourcetree: line-by-line staging, a commit composer and a secret check before every commit. | 220 |
 | [EasyDock](https://github.com/dangkhoabach/EasyDock) | Habits from Windows on the Mac: click the Dock to minimize and ⌘Tab between windows, plus an encrypted clipboard history, system stats and cleanup. | 142 |
 | [KeyCellar](https://github.com/dangkhoabach/KeyCellar) | An offline vault for API keys, passwords and .env sets. Master key in the Secure Enclave, values sealed with HPKE, no network access. | 134 |
